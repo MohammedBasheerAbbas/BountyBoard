@@ -15,7 +15,7 @@ Download or clone this repo then you need to do the following commands from the 
 
 ## Usage
 
-The Default user login is: Admin | 11223344
+The Default user login is: Admin@example.com | 11223344
 You can now use the system as an admin or if you like you can register as a user from the landing page
 
 ## Brief Breakdown
