@@ -39,19 +39,20 @@
       <a href="/admin/departments/{{$task->department()->first()->id}} "> <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-indigo-100 hover:text-indigo-700 hover:shadow-sm transition duration-300 ease-in-out">{{$task->department()->first()->name}}</span></a>
     </div>
 
-    <div class="font-bold text-xl mb-2  mt-4"> Requirements </div>
+    <div class="font-bold text-xl mb-2  mt-6"> Requirements </div>
 
     <ul class="divide-y">
         @foreach ($requirements as $requirement)    
-        <li class=" py-4 p-2 hover:bg-gray-50 font-semibold "> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <li class="py-4 p-2 hover:bg-gray-50 font-semibold "> <span class="mx-2 font-bold text-indigo-600 text-xl"> - </span> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> </span>
            @endif </li>
         @endforeach
     </ul>
 
+    <div class="w-full border-b-2 border-gray-100 mt-6"></div>
         
 
-    <div class="relative pt-1 mt-4 mb-4">
+    <div class="relative pt-1 mt-6 mb-4">
         <div class="flex mb-3 items-center justify-between">
             <div>
             <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">

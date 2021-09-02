@@ -41,19 +41,20 @@
     <ul class="divide-y">
         @if($task->status == 'claimed')
             @foreach ($requirements as $requirement)   
-            <li class="group py-4 p-2 hover:bg-gray-50 font-semibold "> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <li class="group py-4 p-2 hover:bg-gray-50 font-semibold "> <span class="mx-2 font-bold text-indigo-600 text-xl"> - </span> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> </span>
                @endif   <a href="/user/tasks/{{$task->id}}/requirements/{{$requirement->id}}/complete" class="hidden group-hover:inline pl-4 text-indigo-600">Complete</a>  </li>
             @endforeach
         @else
             @foreach ($requirements as $requirement)   
-            <li class=" py-4 p-2 hover:bg-gray-50 font-semibold "> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <li class="group py-4 p-2 hover:bg-gray-50 font-semibold "> <span class="mx-2 font-bold text-indigo-600 text-xl"> - </span> {{$requirement->content}}  @if($requirement->status == "completed") <span class="inline ml-2 text-green-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /> </svg> </span>
             @endif </li>
             @endforeach
         @endif
     </ul>
 
+    <div class="w-full border-b-2 border-gray-100 mt-6"></div>
         
 
     <div class="relative pt-1 mt-4 mb-4">
